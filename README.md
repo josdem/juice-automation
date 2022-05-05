@@ -11,8 +11,8 @@ gradle -Partifactory_user=${username} -Partifactory_password=@{password} test
 
 where:
 
-- ${username} Is artifactory username
-- ${password} Is artifactory password
+- `${username}` Is artifactory username
+- `${password}` Is artifactory password
 
 ### To run a single test with Gradle
 
