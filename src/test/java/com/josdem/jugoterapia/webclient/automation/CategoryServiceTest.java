@@ -1,4 +1,4 @@
-package com.josdem.jugoterapia.automation;
+package com.josdem.jugoterapia.webclient.automation;
 
 import com.josdem.jugoterapia.webclient.config.DataProperties;
 import com.josdem.jugoterapia.webclient.service.CategoryService;
@@ -14,11 +14,12 @@ import reactor.test.StepVerifier;
 
 @Slf4j
 @SpringBootTest
-@RequiredArgsConstructor(onConstructor_ = @Autowired)
 class CategoryServiceTest {
 
-	private final CategoryService categoryService;
-	private final DataProperties dataProperties;
+	@Autowired
+	private CategoryService categoryService;
+	@Autowired
+	private DataProperties dataProperties;
 
 	@Test
 	@DisplayName("it validates categories size")
