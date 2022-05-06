@@ -14,12 +14,11 @@ import reactor.test.StepVerifier;
 
 @Slf4j
 @SpringBootTest
+@RequiredArgsConstructor(onConstructor_ = @Autowired)
 class CategoryServiceTest {
 
-	@Autowired
-	private CategoryService categoryService;
-	@Autowired
-	private DataProperties dataProperties;
+	private final CategoryService categoryService;
+	private final DataProperties dataProperties;
 
 	@Test
 	@DisplayName("it validates categories size")
