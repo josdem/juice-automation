@@ -6,8 +6,10 @@ This project shows how to test an API using[Junit Jupiter](https://junit.org/jun
 #### To test the project with Gradle
 
 ```bash
-gradle -Partifactory_user=${username} -Partifactory_password=@{password} test
-````
+export ARTIFACTORY_USER=${username}
+export ARTIFACTORY_PASSWORD=${password}
+gradle test
+```
 
 where:
 
@@ -17,15 +19,15 @@ where:
 ### To run a single test with Gradle
 
 ```bash
-gradle -Partifactory_user=${username} -Partifactory_password=@{password} test --tests ${testName}
+gradle test --tests ${testName}
 ```
 
 where:
 
 - `${testName}` is the test name you want to execute
 
-
 #### Read this as reference:
 
 * https://josdem.io/techtalk/spring/spring_boot_webclient/
 * https://josdem.io/techtalk/spring/spring_webflux_client/
+* https://josdem.io/techtalk/spring/spring_webflux_artifactory_library/
