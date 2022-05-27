@@ -17,6 +17,12 @@
 		<java.version>17</java.version>
 		<juice.webclient.version>0.0.1-SNAPSHOT</juice.webclient.version>
 	</properties>
+	<repositories>
+		<repository>
+			<id>libs-snapshot-local</id>
+			<url>https://jfrog.josdem.io/artifactory/libs-snapshot-local</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -25,7 +31,8 @@
 		<dependency>
 			<groupId>com.josdem.jugoterapia.webclient</groupId>
 			<artifactId>juice-webclient</artifactId>
-			<version>${juice.webclient.version}</version>
+			<version>0.0.1-20220515.214515-2</version>
+			<classifier>plain</classifier>
 		</dependency>
 
 		<dependency>

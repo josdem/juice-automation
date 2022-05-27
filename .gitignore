@@ -2,4 +2,5 @@ HELP.md
 .gradle
 .idea
 build/
+target/
 
