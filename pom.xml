@@ -20,7 +20,6 @@
 	<repositories>
 		<repository>
 			<id>snapshots</id>
-			<name>libs-snapshot-local</name>
 			<url>http://asus:8081/artifactory/libs-snapshot-local</url>
 		</repository>
 	</repositories>
