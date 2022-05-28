@@ -19,8 +19,9 @@
 	</properties>
 	<repositories>
 		<repository>
-			<id>libs-snapshot-local</id>
-			<url>http://asus:8081/artifactory/libs-snapshot-local/</url>
+			<id>snapshots</id>
+			<name>libs-snapshot-local</name>
+			<url>http://asus:8081/artifactory/libs-snapshot-local</url>
 		</repository>
 	</repositories>
 	<dependencies>
