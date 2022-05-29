@@ -33,6 +33,24 @@ where:
 
 - `${testName}` is the test name you want to execute
 
+#### To test the project with Maven
+
+```bash
+mvn test
+```
+
+### To run a single test with Maven
+
+```bash
+mvn test -Dtest ${testName}
+```
+
+#### To run tests with Jacoco and Sonarqube
+
+```bash
+gradle jacocoTestReport sonarqube test
+```
+
 **Note:** This project requires [juice-webclient](https://github.com/josdem/juice-webclient) as a dependency
 
 #### Read this as reference:
