@@ -1,4 +1,4 @@
-package com.josdem.jugoterapia.webclient.automation;
+package com.josdem.jugoterapia.automation;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
