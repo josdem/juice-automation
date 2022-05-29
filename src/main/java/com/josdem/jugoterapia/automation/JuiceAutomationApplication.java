@@ -10,8 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = "com.josdem.jugoterapia.webclient")
 public class JuiceAutomationApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(JuiceAutomationApplication.class, args);
-    }
-
+  public static void main(String[] args) {
+    SpringApplication.run(JuiceAutomationApplication.class, args);
+  }
 }
