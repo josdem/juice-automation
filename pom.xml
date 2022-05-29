@@ -10,12 +10,12 @@
 	</parent>
 	<groupId>com.josdem.jugoterapia.webclient.automation</groupId>
 	<artifactId>juice-automation</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>juice-automation</name>
 	<description>Juice scenarios validation using Junit5</description>
 	<properties>
 		<java.version>16</java.version>
-		<juice.webclient.version>0.0.1-SNAPSHOT</juice.webclient.version>
+		<juice.webclient.version>1.0.0-SNAPSHOT</juice.webclient.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>com.josdem.jugoterapia.webclient</groupId>
 			<artifactId>juice-webclient</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${juice.webclient.version}</version>
 		</dependency>
 
 		<dependency>
