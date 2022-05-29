@@ -1,4 +1,4 @@
-package com.josdem.jugoterapia.webclient.automation;
+package com.josdem.jugoterapia.automation;
 
 import com.josdem.jugoterapia.webclient.config.DataProperties;
 import com.josdem.jugoterapia.webclient.service.CategoryService;
