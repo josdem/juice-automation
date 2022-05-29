@@ -11,7 +11,7 @@ ext {
 }
 
 
-group = 'com.josdem.jugoterapia.webclient.automation'
+group = 'com.josdem.jugoterapia.webclient'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '16'
 
