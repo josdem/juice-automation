@@ -56,6 +56,10 @@ gradle jacocoTestReport sonarqube test
 
 **Note:** This project requires [juice-webclient](https://github.com/josdem/juice-webclient) as a dependency
 
+#### For more information:
+
+Visit our wiki page: [Wiki page](https://github.com/josdem/juice-automation/wiki)
+
 #### Read this as reference:
 
 * https://josdem.io/techtalk/spring/spring_boot_webclient/
