@@ -2,7 +2,7 @@ Juice Automation
 ----------------------------------------
 
 [![Build Status](https://app.travis-ci.com/josdem/juice-automation.svg?branch=master)](https://app.travis-ci.com/josdem/juice-automation)
-[![Quality Gate Status](https://sonar.josdem.io/api/project_badges/measure?project=com.josdem.jugoterapia.webclient%3Ajuice-automation&metric=alert_status)](https://sonar.josdem.io/dashboard?id=com.josdem.jugoterapia.webclient%3Ajuice-automation)
+[![Quality Gate Status](https://sonar.josdem.io/api/project_badges/measure?project=com.josdem.jugoterapia.webclient.automation%3Ajuice-automation&metric=alert_status)](https://sonar.josdem.io/dashboard?id=com.josdem.jugoterapia.webclient.automation%3Ajuice-automation)
 
 This project shows how to test an API using[Junit Jupiter](https://junit.org/junit5/docs/current/user-guide/) and a third-party library [juice-webclient](https://github.com/josdem/juice-webclient)
 
