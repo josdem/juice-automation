@@ -1,4 +1,4 @@
-package com.josdem.jugoterapia.automation;
+package com.josdem.jugoterapia.webclient.automation;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
