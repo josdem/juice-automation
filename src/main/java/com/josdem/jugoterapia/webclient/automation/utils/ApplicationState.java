@@ -12,5 +12,4 @@ import org.springframework.stereotype.Component;
 public class ApplicationState {
   private Category category;
   private Beverage beverage;
-  private Integer categoryId;
 }
