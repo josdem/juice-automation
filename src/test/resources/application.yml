@@ -14,3 +14,9 @@ data:
     - category:
       id: 8
       name: Boost
+  beverage:
+    id: 85
+    name: Anti-constipation Smoothie
+    ingredients: 1 Apple,1 Pear
+    recipe: Start your day with apple and pear without peel getting juice as much as you can utilizing juice extractor or using just a blender. Apple juice contains sorbitol, natural sugar which helps to our body to avoid persistent constipation
+    image: https://storage.googleapis.com/jugoterapia/85.jpg

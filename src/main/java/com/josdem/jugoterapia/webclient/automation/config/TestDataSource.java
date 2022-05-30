@@ -1,5 +1,6 @@
 package com.josdem.jugoterapia.webclient.automation.config;
 
+import com.josdem.jugoterapia.webclient.model.Beverage;
 import com.josdem.jugoterapia.webclient.model.Category;
 import java.util.List;
 import lombok.Getter;
@@ -13,4 +14,5 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties("data")
 public class TestDataSource {
   private List<Category> categories;
+  private Beverage beverage;
 }
