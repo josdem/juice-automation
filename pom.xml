@@ -15,7 +15,7 @@
 	<description>Juice scenarios validation using Junit5</description>
 	<properties>
 		<java.version>16</java.version>
-		<juice.webclient.version>1.0.2-SNAPSHOT</juice.webclient.version>
+		<juice.webclient.version>1.0.3-SNAPSHOT</juice.webclient.version>
 	</properties>
 	<repositories>
 		<repository>
