@@ -3,7 +3,6 @@ package com.josdem.jugoterapia.webclient.automation;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.josdem.jugoterapia.webclient.automation.config.TestDataSource;
 import com.josdem.jugoterapia.webclient.service.BeverageService;
 import com.josdem.jugoterapia.webclient.service.CategoryService;
@@ -76,22 +75,19 @@ class BeverageFromCategoriesMapTest {
   @DisplayName("it gets specific beverage")
   void shouldGetBeverage(TestInfo testInfo) {
     log.info("Running {}", testInfo.getDisplayName());
-    Mono<JsonNode> publisher = beverageService.getBeverageAsJson(EXPECTED_BEVERAGE_ID);
+    Mono<Map> publisher = beverageService.getBeverageAsMap(EXPECTED_BEVERAGE_ID);
     StepVerifier.create(publisher)
         .assertNext(
             beverage -> {
               assertAll(
                   "beverage",
-                  () -> assertEquals(data.getBeverage().getId(), beverage.get("id").asInt()),
-                  () -> assertEquals(data.getBeverage().getName(), beverage.get("name").asText()),
+                  () -> assertEquals(data.getBeverage().getId(), beverage.get("id")),
+                  () -> assertEquals(data.getBeverage().getName(), beverage.get("name")),
                   () ->
                       assertEquals(
-                          data.getBeverage().getIngredients(),
-                          beverage.get("ingredients").asText()),
-                  () ->
-                      assertEquals(data.getBeverage().getRecipe(), beverage.get("recipe").asText()),
-                  () ->
-                      assertEquals(data.getBeverage().getImage(), beverage.get("image").asText()));
+                          data.getBeverage().getIngredients(), beverage.get("ingredients")),
+                  () -> assertEquals(data.getBeverage().getRecipe(), beverage.get("recipe")),
+                  () -> assertEquals(data.getBeverage().getImage(), beverage.get("image")));
             })
         .verifyComplete();
   }
