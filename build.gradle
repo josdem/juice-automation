@@ -9,7 +9,7 @@ plugins {
 ext {
 	artifactory_user = "$System.env.ARTIFACTORY_USER"
 	artifactory_password = "$System.env.ARTIFACTORY_PASSWORD"
-	juiceWebClientVersion = '1.0.1-SNAPSHOT'
+	juiceWebClientVersion = '1.0.2-SNAPSHOT'
 }
 
 

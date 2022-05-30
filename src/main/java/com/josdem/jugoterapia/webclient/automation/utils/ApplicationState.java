@@ -1,6 +1,5 @@
 package com.josdem.jugoterapia.webclient.automation.utils;
 
-
 import com.josdem.jugoterapia.webclient.model.Beverage;
 import com.josdem.jugoterapia.webclient.model.Category;
 import lombok.Getter;
@@ -11,6 +10,7 @@ import org.springframework.stereotype.Component;
 @Setter
 @Component
 public class ApplicationState {
-    private Category category;
-    private Beverage beverage;
+  private Category category;
+  private Beverage beverage;
+  private Integer categoryId;
 }
