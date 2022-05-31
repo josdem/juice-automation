@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import com.josdem.jugoterapia.webclient.automation.config.TestDataSource;
-import com.josdem.jugoterapia.webclient.automation.utils.ApplicationState;
 import com.josdem.jugoterapia.webclient.model.Beverage;
 import com.josdem.jugoterapia.webclient.model.Category;
 import com.josdem.jugoterapia.webclient.service.BeverageService;
@@ -29,9 +28,11 @@ import reactor.test.StepVerifier;
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
 class BeverageFromCategoriesTest {
 
+  private static final int EXPECTED_CATEGORY_ID = 5;
+  private static final int EXPECTED_BEVERAGE_ID = 85;
+
   private final CategoryService categoryService;
   private final BeverageService beverageService;
-  private final ApplicationState applicationState;
   private final TestDataSource data;
 
   @Test
@@ -40,13 +41,14 @@ class BeverageFromCategoriesTest {
   void shouldGetCategoriesById(TestInfo testInfo) {
     log.info("Running: {}", testInfo.getDisplayName());
     Flux<Category> publisher =
-        categoryService.getCategoriesByLanguage("en").filter(category -> category.getId() == 5);
+        categoryService
+            .getCategoriesByLanguage("en")
+            .filter(category -> category.getId() == EXPECTED_CATEGORY_ID);
     StepVerifier.create(publisher)
         .assertNext(
             category -> {
               assertEquals(5, category.getId());
               assertEquals("Healing", category.getName());
-              applicationState.setCategory(category);
             })
         .verifyComplete();
   }
@@ -58,8 +60,8 @@ class BeverageFromCategoriesTest {
     log.info("Running {}", testInfo.getDisplayName());
     Flux<Beverage> publisher =
         categoryService
-            .getBeveragesByCategory(applicationState.getCategory().getId())
-            .filter(beverage -> beverage.getId() == 85);
+            .getBeveragesByCategory(EXPECTED_CATEGORY_ID)
+            .filter(beverage -> beverage.getId() == EXPECTED_BEVERAGE_ID);
     StepVerifier.create(publisher)
         .assertNext(
             beverage -> {
@@ -67,7 +69,6 @@ class BeverageFromCategoriesTest {
               assertEquals(data.getBeverage().getName(), beverage.getName());
               assertNotNull(data.getBeverage().getIngredients());
               assertEquals(data.getBeverage().getImage(), beverage.getImage());
-              applicationState.setBeverage(beverage);
             })
         .verifyComplete();
   }
@@ -77,7 +78,7 @@ class BeverageFromCategoriesTest {
   @DisplayName("it gets specific beverage")
   void shouldGetBeverage(TestInfo testInfo) {
     log.info("Running {}", testInfo.getDisplayName());
-    Mono<Beverage> publisher = beverageService.getBeverage(applicationState.getBeverage().getId());
+    Mono<Beverage> publisher = beverageService.getBeverage(EXPECTED_BEVERAGE_ID);
     StepVerifier.create(publisher).expectNext(data.getBeverage()).verifyComplete();
   }
 }
