@@ -8,7 +8,6 @@ plugins {
 
 def juiceWebClientVersion = '1.0.3-SNAPSHOT'
 
-
 group = 'com.josdem.jugoterapia.webclient.automation'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
