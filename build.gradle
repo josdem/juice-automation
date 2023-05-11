@@ -6,7 +6,12 @@ plugins {
     id 'java'
 }
 
-def juiceWebClientVersion = '1.0.3-SNAPSHOT'
+ext {
+    artifactory_user = "$System.env.ARTIFACTORY_USER"
+    artifactory_password = "$System.env.ARTIFACTORY_PASSWORD"
+    juiceWebClientVersion = '1.0.3-SNAPSHOT'
+    hamcrestVersion = 2.2
+}
 
 group = 'com.josdem.jugoterapia.webclient.automation'
 version = '0.0.1-SNAPSHOT'
@@ -22,6 +27,10 @@ repositories {
     mavenCentral()
     maven {
         url "https://jfrog.josdem.io/artifactory/libs-snapshot-local/"
+        credentials {
+            username = "$artifactory_user"
+            password = "$artifactory_password"
+        }
     }
 }
 
