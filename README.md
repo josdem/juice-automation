@@ -34,6 +34,20 @@ mvn test
 mvn test -Dtest ${testName}
 ```
 
+### To download third-party library from artifactory
+
+```bash
+export ARTIFACTORY_USER=${username}
+export ARTIFACTORY_PASSWORD=${password}
+```
+
+where:
+
+- `${username}` Is artifactory username
+- `${password}` Is artifactory password
+
+**Note:** If you want to have the Jfrog library, feel free to drop me a message on my home page website and ask for a Jfrog credentials.
+
 #### To run tests with Jacoco and Sonarqube
 
 ```bash
