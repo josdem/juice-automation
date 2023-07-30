@@ -41,6 +41,13 @@ export ARTIFACTORY_USER=${username}
 export ARTIFACTORY_PASSWORD=${password}
 ```
 
+If you are using Windows based platform:
+
+```bash
+$Env:ARTIFACTORY_USER="${username}"
+$Env:ARTIFACTORY_PASSWORD="${passoword}"
+```
+
 where:
 
 - `${username}` Is artifactory username
