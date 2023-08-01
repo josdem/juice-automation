@@ -41,12 +41,19 @@ export ARTIFACTORY_USER=${username}
 export ARTIFACTORY_PASSWORD=${password}
 ```
 
+If you are using Windows based platform:
+
+```bash
+$Env:ARTIFACTORY_USER="${username}"
+$Env:ARTIFACTORY_PASSWORD="${password}"
+```
+
 where:
 
 - `${username}` Is artifactory username
 - `${password}` Is artifactory password
 
-**Note:** If you want to have the Jfrog library, feel free to drop me a message on my home page website and ask for a Jfrog credentials.
+**Note:** If you want to have the Jfrog username and password, feel free to drop me a message on my home page website and ask for Jfrog credentials.
 
 #### To run tests with Jacoco and Sonarqube
 
